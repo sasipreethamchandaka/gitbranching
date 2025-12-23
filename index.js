@@ -1,4 +1,4 @@
-iimport express from "express";
+import express from "express";
 import mysql from "mysql";
 import cors from "cors";
 import morgan from "morgan";
@@ -16,7 +16,7 @@ const db = mysql.createConnection({
   user: process.env.DB_USERNAME,
   password: process.env.DB_PASSWORD,
   port: process.env.PORT,
-  database: "test",
+  database: "TEST",
 });
 
 app.get("/", (req, res) => {
@@ -77,6 +77,7 @@ app.put("/books/:id", (req, res) => {
   });
 });
 
-app.listen(82, () => {
+
+app.listen(81, () => {
   console.log("Connected to backend.");
 });
